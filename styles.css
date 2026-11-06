@@ -70,6 +70,9 @@ em{font-style:italic;color:var(--accent)}
 .btn-secondary{background:transparent;color:var(--text)}
 .btn-light{background:#fbf5ee;color:var(--dark);border-color:#fbf5ee}
 
+a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+section[id]{scroll-margin-top:100px}
+
 /* Hero */
 .hero{
   padding:64px 0 40px;
@@ -78,7 +81,7 @@ em{font-style:italic;color:var(--accent)}
     linear-gradient(180deg, var(--bg) 0%, #f7eee4 100%);
 }
 .hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
-.hero-logo{width:min(340px, 80%);margin:0 0 30px -10px}
+.hero-logo{width:min(260px, 70%);margin:0 0 26px -8px}
 .lead{max-width:520px;color:var(--muted);font-size:16px;margin:0 0 30px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
 .hero-visual img{border-radius:32px;box-shadow:var(--shadow);width:100%}
@@ -125,16 +128,15 @@ em{font-style:italic;color:var(--accent)}
 .c-limon{color:var(--limon)}     .dot.c-limon{background:var(--limon-soft);box-shadow:0 0 0 2px var(--limon) inset}
 .c-jazmin{color:var(--jazmin)}   .dot.c-jazmin{background:var(--jazmin)}
 
-.line-visual{
-  background:linear-gradient(160deg, #f6ece1, #efe2d4);
-  border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);
-}
-.line-visual img{filter:drop-shadow(0 8px 18px rgba(71,44,31,.14))}
-.line-visual.cremas{display:grid;gap:16px}
-.line-visual.cremas img{border-radius:18px}
-.line-visual.sales{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.line-visual.sales img{border-radius:18px}
-.line-visual.bombas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}
+/* Product photography */
+.line-visual{margin:0;overflow:hidden;background:#eee3d6;border-radius:22px}
+.line-visual.product-photo{display:block;padding:0;box-shadow:none;position:relative}
+.line-visual.product-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:none;border-radius:0;transition:transform .6s ease}
+.line-visual.product-photo:hover img{transform:scale(1.025)}
+.line-visual.product-photo figcaption{position:absolute;inset:auto 0 0;padding:48px 24px 22px;background:linear-gradient(transparent,rgba(41,28,19,.64));color:#fff;font-family:"Cormorant Garamond",serif;font-size:25px;font-style:italic;pointer-events:none}
+.product-link{display:inline-flex;align-items:center;gap:22px;border-bottom:1px solid var(--accent);padding:10px 0;margin-top:20px;font-size:12px;letter-spacing:.05em}
+.product-link span{font-size:21px;line-height:1}
+.product-link:hover{color:#8b573a}
 
 /* Banner */
 .banner{padding:0 0 90px}
@@ -144,6 +146,7 @@ em{font-style:italic;color:var(--accent)}
 .kits{padding:96px 0;background:var(--dark);color:#f8efe6}
 .section-head.light .eyebrow{color:#d9bca9}
 .section-head.light em{color:#d9bca9}
+.section-head.light .section-copy{color:#e0cfc3}
 .kit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .kit-card{
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);
@@ -151,9 +154,9 @@ em{font-style:italic;color:var(--accent)}
 }
 .kit-card img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .kit-body{padding:26px 26px 30px;display:flex;flex-direction:column;gap:16px;flex:1}
-.kit-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
-.kit-head h3{margin:0;font-size:30px}
-.price{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:600;color:#f3d9c6;white-space:nowrap}
+.kit-head{display:block}
+.kit-head h3{margin:0;font-size:38px}
+.kit-number{margin:0 0 10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#dec4b1}
 .kit-body ul{margin:0;padding-left:18px;color:rgba(248,239,230,.8);flex:1}
 .kit-body li{margin-bottom:4px}
 .kit-body .btn{align-self:flex-start}
@@ -208,9 +211,15 @@ em{font-style:italic;color:var(--accent)}
   .nav-cta{padding:9px 13px;font-size:10px}
   .brand img{height:40px}
   h3{font-size:30px}
-  .line-visual{padding:14px}
+  .line-visual.product-photo{padding:0}
+  .line-visual.product-photo figcaption{font-size:23px}
   .line-visual.sales,.line-visual.bombas{gap:8px}
   .statement-box{padding:40px 20px;border-radius:24px}
   .hero-actions,.contact-actions{flex-direction:column;align-items:stretch}
   .footer-links{flex-wrap:wrap}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important}
 }
