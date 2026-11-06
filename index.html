@@ -3,53 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="YSELÉA — La belleza de volver a ti. Hidratante corporal, bálsamo labial y bombitas de baño." />
-  <title>YSELÉA — La belleza de volver a ti</title>
+  <meta name="description" content="Yseléa — Cosmética artesanal. Cremas de sebo de res, sales de baño y bombas de baño efervescentes en Lavanda, Limón y Jazmín." />
+  <title>Yseléa — La belleza de volver a ti</title>
+  <link rel="icon" type="image/png" href="assets/logo-yselea.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="#inicio" class="brand">
-        <span class="brand-name">YSELÉA</span>
-        <span class="brand-tagline">La belleza de volver a ti</span>
+      <a href="#inicio" class="brand" aria-label="Yseléa, inicio">
+        <img src="assets/logo-yselea.png" alt="Yseléa — la belleza de volver a ti" />
       </a>
 
       <nav class="menu">
-        <a href="#productos">Productos</a>
-        <a href="#ritual">Ritual</a>
-        <a href="#esencia">Esencia</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#kits">Kits</a>
+        <a href="#aromas">Aromas</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a href="#productos" class="nav-cta">Descubrir</a>
+      <a href="https://wa.me/59161328386" class="nav-cta" target="_blank" rel="noopener">Pedir por WhatsApp</a>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">CUIDADO · CALMA · BELLEZA</p>
-          <h1>La belleza de <em>volver a ti</em>.</h1>
+          <img class="hero-logo" src="assets/logo-yselea.png" alt="Yseléa — la belleza de volver a ti" />
+          <p class="eyebrow">Cosmética artesanal</p>
+          <h1>Rituales que te <em>devuelven a ti</em>.</h1>
           <p class="lead">
-            Rituales suaves y sensoriales para cuidar tu piel, tus labios
-            y esos pequeños momentos que también merecen ser tuyos.
+            Cremas de sebo de res, sales y bombas de baño hechas a mano
+            en tres aromas: lavanda, limón y jazmín.
           </p>
-
           <div class="hero-actions">
-            <a href="#productos" class="btn btn-primary">Conoce la colección</a>
-            <a href="#esencia" class="btn btn-secondary">Nuestra esencia</a>
+            <a href="#coleccion" class="btn btn-primary">Ver la colección</a>
+            <a href="#kits" class="btn btn-secondary">Kits de regalo</a>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="hero-card">
-            <img src="assets/hidratante-corporal-yselea.png" alt="Hidratante corporal YSELÉA en frasco ámbar" />
-          </div>
+          <img src="assets/hero-crema-lavanda.jpg" alt="Crema de sebo de res Yseléa de lavanda, abierta junto a ramas de lavanda, mientras una mujer se aplica crema en la pierna" />
         </div>
       </div>
     </section>
@@ -61,147 +60,210 @@
       </div>
     </section>
 
-    <section class="products" id="productos">
+    <!-- COLECCIÓN -->
+    <section class="collection" id="coleccion">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">COLECCIÓN INICIAL</p>
-          <h2>Tres rituales para consentirte</h2>
+          <p class="eyebrow">La colección</p>
+          <h2>Tres rituales, tres aromas</h2>
           <p class="section-copy">
-            Una línea pensada para sentirse cálida, natural y delicada.
-            Esta es una primera propuesta visual para el sitio de YSELÉA.
+            Cada línea viene en Lavanda, Limón y Jazmín. Elige el aroma que va con tu momento.
           </p>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image">
-              <img src="assets/hidratante-corporal-yselea.png" alt="Hidratante corporal YSELÉA" />
-            </div>
-            <div class="product-content">
-              <span class="product-index">01 · HIDRATA</span>
-              <h3>Hidratante corporal</h3>
-              <p>
-                Una crema de textura reconfortante para nutrir y dejar la piel
-                suave, cuidada y envuelta en una sensación delicada.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <img src="assets/balsamo-labial-yselea.png" alt="Bálsamo labial YSELÉA" />
-            </div>
-            <div class="product-content">
-              <span class="product-index">02 · CUIDA</span>
-              <h3>Bálsamo labial</h3>
-              <p>
-                Un gesto pequeño pero bonito para llevar contigo todos los días,
-                ideal para mantener los labios suaves y protegidos.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">
-              <img src="assets/bombitas-bano-yselea.png" alt="Bombitas de baño YSELÉA" />
-            </div>
-            <div class="product-content">
-              <span class="product-index">03 · DETENTE</span>
-              <h3>Bombitas de baño</h3>
-              <p>
-                Un momento de pausa convertido en ritual: tonos suaves,
-                sensación relajante y una presentación con aire delicado.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="ritual-section" id="ritual">
-      <div class="container ritual-grid">
-        <div class="ritual-copy">
-          <p class="eyebrow">TU RITUAL YSELÉA</p>
-          <h2>Hidrata. <br>Cuida. <br><em>Detente.</em></h2>
-          <p>
-            Queremos que YSELÉA se sienta como una marca femenina,
-            elegante y cercana. Un espacio donde el cuidado también
-            sea una forma de volver a ti.
-          </p>
-          <a href="#contacto" class="btn btn-primary">Quiero esta línea</a>
-        </div>
-
-        <div class="ritual-stack">
-          <div class="mini-card">
-            <img src="assets/balsamo-labial-yselea.png" alt="Bálsamo labial YSELÉA" />
+        <!-- Cremas -->
+        <article class="line">
+          <div class="line-copy">
+            <span class="line-index">01 · Hidrata</span>
+            <h3>Crema de sebo de res</h3>
+            <p class="line-tags">Hidrata · Nutre · Suaviza</p>
+            <p>
+              Sebo de res purificado con aceite de coco, aceite de almendras y vitamina E,
+              perfumada con aceite esencial. Una textura que nutre y deja la piel suave.
+            </p>
+            <dl class="specs">
+              <div><dt>Contenido</dt><dd>50 g</dd></div>
+              <div><dt>Uso</dt><dd>Sobre piel limpia y seca, masajear hasta absorber</dd></div>
+              <div><dt>Duración</dt><dd>6 meses después de abierto</dd></div>
+            </dl>
+            <ul class="aroma-chips">
+              <li class="c-lavanda">Lavanda</li>
+              <li class="c-limon">Limón</li>
+              <li class="c-jazmin">Jazmín</li>
+            </ul>
           </div>
-          <div class="mini-card">
-            <img src="assets/bombitas-bano-yselea.png" alt="Bombitas de baño YSELÉA" />
+          <div class="line-visual cremas">
+            <img src="assets/crema-lavanda.png" alt="Etiqueta de la crema de sebo de res Yseléa, aroma Lavanda, 50 g" loading="lazy" />
+            <img src="assets/crema-limon.png" alt="Etiqueta de la crema de sebo de res Yseléa, aroma Limón, 50 g" loading="lazy" />
+            <img src="assets/crema-jazmin.png" alt="Etiqueta de la crema de sebo de res Yseléa, aroma Jazmín, 50 g" loading="lazy" />
           </div>
+        </article>
+
+        <!-- Sales -->
+        <article class="line reverse">
+          <div class="line-copy">
+            <span class="line-index">02 · Relaja</span>
+            <h3>Sales de baño</h3>
+            <p class="line-tags">Relaja · Suaviza · Equilibra</p>
+            <p>
+              Sal marina con aceite de almendras, aceite esencial y flores secas.
+              Dos o tres cucharadas en agua tibia y quince minutos solo para ti.
+            </p>
+            <dl class="specs">
+              <div><dt>Contenido</dt><dd>250 g</dd></div>
+              <div><dt>Uso</dt><dd>2 a 3 cucharadas en la bañera con agua tibia</dd></div>
+            </dl>
+            <ul class="aroma-list">
+              <li><span class="dot c-lavanda"></span><em>Susurro de Lavanda</em></li>
+              <li><span class="dot c-limon"></span><em>Amanecer de Limón</em></li>
+              <li><span class="dot c-jazmin"></span><em>Caricia de Jazmín</em></li>
+            </ul>
+          </div>
+          <div class="line-visual sales">
+            <img src="assets/sales-lavanda.png" alt="Etiqueta de sales de baño Yseléa, Susurro de Lavanda, 250 g" loading="lazy" />
+            <img src="assets/sales-limon.png" alt="Etiqueta de sales de baño Yseléa, Amanecer de Limón, 250 g" loading="lazy" />
+            <img src="assets/sales-jazmin.png" alt="Etiqueta de sales de baño Yseléa, Caricia de Jazmín, 250 g" loading="lazy" />
+          </div>
+        </article>
+
+        <!-- Bombas -->
+        <article class="line">
+          <div class="line-copy">
+            <span class="line-index">03 · Detente</span>
+            <h3>Bomba de baño efervescente</h3>
+            <p class="line-tags">Relaja · Calma · Equilibra</p>
+            <p>
+              Sal de Epsom, bicarbonato, ácido cítrico y aceite de coco con aceite esencial.
+              Se deshace en burbujas y aroma en cuanto toca el agua.
+            </p>
+            <dl class="specs">
+              <div><dt>Contenido</dt><dd>100 g</dd></div>
+              <div><dt>Uso</dt><dd>Colocar en la bañera con agua tibia y disfrutar</dd></div>
+            </dl>
+            <ul class="aroma-list">
+              <li><span class="dot c-lavanda"></span><em>Lavanda Nocturna</em></li>
+              <li><span class="dot c-limon"></span><em>Brisas de Limón</em></li>
+              <li><span class="dot c-jazmin"></span><em>Jazmín Serena</em></li>
+            </ul>
+          </div>
+          <div class="line-visual bombas">
+            <img src="assets/bomba-lavanda.png" alt="Etiqueta de bomba de baño Yseléa, Lavanda Nocturna, 100 g" loading="lazy" />
+            <img src="assets/bomba-limon.png" alt="Etiqueta de bomba de baño Yseléa, Brisas de Limón, 100 g" loading="lazy" />
+            <img src="assets/bomba-jazmin.png" alt="Etiqueta de bomba de baño Yseléa, Jazmín Serena, 100 g" loading="lazy" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="container">
+        <img src="assets/rituales-lavanda.jpg" alt="Pequeños rituales, grandes momentos para ti: crema, sales y bomba de baño Yseléa de lavanda sobre una bandeja de madera" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- KITS -->
+    <section class="kits" id="kits">
+      <div class="container">
+        <div class="section-head light">
+          <p class="eyebrow">Kits de regalo · Unidades limitadas</p>
+          <h2>Para regalar <em>o regalarte</em></h2>
+        </div>
+
+        <div class="kit-grid">
+          <article class="kit-card">
+            <img src="assets/kit-1.jpg" alt="Kit 1 Yseléa con regalo de collar" loading="lazy" />
+            <div class="kit-body">
+              <div class="kit-head">
+                <h3>Kit 1 · Regalo Collar</h3>
+                <span class="price">Bs 180</span>
+              </div>
+              <ul>
+                <li>1 Sal de baño (250 g)</li>
+                <li>1 Bomba de baño efervescente (100 g aprox.)</li>
+                <li>1 Crema de sebo de res (50 g)</li>
+                <li>1 Collar de regalo</li>
+              </ul>
+              <a class="btn btn-light" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20el%20Kit%201" target="_blank" rel="noopener">Quiero el Kit 1</a>
+            </div>
+          </article>
+
+          <article class="kit-card">
+            <img src="assets/kit-2.jpg" alt="Kit 2 Yseléa con regalo de manilla o moña" loading="lazy" />
+            <div class="kit-body">
+              <div class="kit-head">
+                <h3>Kit 2 · Regalo Manilla o Moña</h3>
+                <span class="price">Bs 140</span>
+              </div>
+              <ul>
+                <li>1 Sal de baño (250 g)</li>
+                <li>1 Crema de sebo de res (50 g)</li>
+                <li>1 Manilla o moña de regalo (según disponibilidad)</li>
+              </ul>
+              <a class="btn btn-light" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20el%20Kit%202" target="_blank" rel="noopener">Quiero el Kit 2</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="essence" id="esencia">
-      <div class="container essence-grid">
-        <div class="essence-copy">
-          <p class="eyebrow">NUESTRA ESENCIA</p>
-          <h2>Natural, sensorial y delicada.</h2>
-          <p>
-            La dirección visual de YSELÉA mezcla tonos crema, beige, café suave,
-            ámbar y lavanda tenue para transmitir calma, feminidad y calidez.
-          </p>
+    <!-- AROMAS -->
+    <section class="aromas" id="aromas">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Nuestros aromas</p>
+          <h2>¿Cuál es el tuyo?</h2>
+        </div>
+        <div class="aroma-grid">
+          <article class="aroma a-lavanda">
+            <h3>Lavanda</h3>
+            <p>Para la noche y el descanso. Calma y ayuda a soltar el día.</p>
+            <span>Crema · Susurro de Lavanda · Lavanda Nocturna</span>
+          </article>
+          <article class="aroma a-limon">
+            <h3>Limón</h3>
+            <p>Fresco y luminoso. Para empezar el día con energía.</p>
+            <span>Crema · Amanecer de Limón · Brisas de Limón</span>
+          </article>
+          <article class="aroma a-jazmin">
+            <h3>Jazmín</h3>
+            <p>Floral y envolvente. Un gesto suave que se queda en la piel.</p>
+            <span>Crema · Caricia de Jazmín · Jazmín Serena</span>
+          </article>
         </div>
 
-        <div class="values">
-          <article>
-            <span>01</span>
-            <h3>Texturas que abrazan</h3>
-            <p>Formulaciones y presentaciones que se sienten suaves y reconfortantes.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Rituales simples</h3>
-            <p>Productos pensados para disfrutar pequeños momentos de cuidado diario.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Belleza íntima</h3>
-            <p>Una marca que busca hablar de pausa, cariño y conexión contigo misma.</p>
-          </article>
-        </div>
+        <ul class="values">
+          <li>Ingredientes naturales</li>
+          <li>Hecho a mano</li>
+          <li>Sin pruebas en animales</li>
+          <li>Uso externo</li>
+        </ul>
       </div>
     </section>
 
-    <section class="closing">
-      <div class="container closing-box">
-        <p class="eyebrow">BORRADOR WEB</p>
-        <h2>Una primera tienda visual para YSELÉA.</h2>
-        <p>
-          Este sitio ya usa las imágenes conceptuales de producto para que la marca
-          se vea mucho más real. Más adelante podemos reemplazarlas por fotografías reales.
-        </p>
-        <a href="#contacto" class="btn btn-primary">Seguir refinando</a>
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-box">
+        <img src="assets/logo-yselea.png" alt="Yseléa" class="contact-logo" loading="lazy" />
+        <h2>Haz tu pedido</h2>
+        <p>Escríbenos por WhatsApp y te ayudamos a elegir tu aroma o tu kit.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://wa.me/59161328386" target="_blank" rel="noopener">WhatsApp 6132 8386</a>
+          <a class="btn btn-primary" href="https://wa.me/59172196093" target="_blank" rel="noopener">WhatsApp 7219 6093</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/yselea/" target="_blank" rel="noopener">Instagram @yselea</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="contacto">
+  <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <div class="brand footer-brand">
-          <span class="brand-name">YSELÉA</span>
-          <span class="brand-tagline">La belleza de volver a ti</span>
-        </div>
-      </div>
-
+      <img src="assets/logo-yselea.png" alt="Yseléa" class="footer-logo" loading="lazy" />
       <div class="footer-links">
+        <a href="#coleccion">Colección</a>
+        <a href="#kits">Kits</a>
         <a href="https://www.instagram.com/yselea/" target="_blank" rel="noopener">Instagram</a>
-        <a href="#">Contacto</a>
-        <a href="#">Políticas</a>
       </div>
-
-      <p class="footer-note">© 2026 YSELÉA · Borrador conceptual</p>
+      <p class="footer-note">© 2026 Yseléa · Cosmética artesanal</p>
     </div>
   </footer>
 </body>
