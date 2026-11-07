@@ -223,3 +223,69 @@ section[id]{scroll-margin-top:100px}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
 }
+
+/* Choose a ritual */
+button,input,textarea{font:inherit}
+button{cursor:pointer;color:inherit}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--lavanda);outline-offset:4px}
+button:disabled{cursor:default;opacity:.4}
+[hidden]{display:none!important}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.product-card{background:var(--card);overflow:hidden;border:1px solid var(--line);border-radius:22px;display:flex;flex-direction:column}
+.catalog-photo{overflow:hidden;background:var(--bg-soft)}
+.catalog-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 62%;transition:transform .5s ease}
+.product-card:hover .catalog-photo img{transform:scale(1.025)}
+.product-body{padding:30px 24px;display:flex;flex-direction:column;flex:1}
+.product-body .line-index{margin:0 0 12px}
+.product-body h3{font-size:34px;line-height:1.08;margin-bottom:14px}
+.product-body .line-tags{font-size:11px;letter-spacing:.025em}
+.product-description{color:var(--muted);margin:0 0 26px;font-size:14px}
+.product-form{margin-top:auto}
+.selected-aroma{font-size:12px;color:var(--muted);margin:0 0 12px;min-height:48px}
+.selected-aroma strong{font-family:"Cormorant Garamond",serif;font-size:23px;font-style:italic;color:var(--lavanda);font-weight:600}
+.aroma-options{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.aroma-choice{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;background:white;padding:8px 11px;font-size:11px}
+.aroma-choice span{width:7px;height:7px;border-radius:50%;background:currentColor}
+.aroma-choice[aria-pressed="true"]{border-color:currentColor;box-shadow:inset 0 0 0 1px currentColor}
+.product-order{display:flex;gap:12px;align-items:end}
+.quantity-label{display:flex;flex-direction:column;font-size:10px;letter-spacing:.03em;gap:6px;flex:none}
+.quantity-label input{width:58px;height:47px;border-radius:12px;border:1px solid var(--line);background:#fff;padding:8px;text-align:center;font-size:14px;color:var(--text)}
+.product-order .btn{font-size:10px;letter-spacing:.06em;flex:1;padding:15px 10px;min-height:47px}
+.catalog-note{margin:30px 0 0;text-align:center;font-size:12px;color:var(--muted)}
+.cart-trigger{background:transparent;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.cart-count{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;border-radius:50%;background:var(--text);color:white;font-size:11px;letter-spacing:0;padding:0 5px}
+.cart-trigger:hover .cart-count{background:var(--card);color:var(--text)}
+.floating-cart{position:fixed;bottom:22px;right:24px;z-index:110;border:1px solid #e3ccb7;border-radius:999px;padding:13px 19px;display:flex;align-items:center;gap:14px;background:var(--dark);color:#fffaf4;font-size:12px;box-shadow:0 8px 30px #39271b30}
+.floating-cart .cart-count{background:#edddce;color:var(--dark)}
+.cart-toast{position:fixed;bottom:90px;left:50%;transform:translate(-50%,12px);background:var(--dark);color:white;border-radius:14px;padding:14px 20px;font-size:12px;max-width:calc(100% - 32px);width:max-content;z-index:300;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:var(--shadow)}
+.cart-toast.is-visible{opacity:1;transform:translate(-50%,0)}
+.cart-dialog{width:min(580px,calc(100% - 28px));max-height:85dvh;border:1px solid var(--line);border-radius:24px;background:var(--card);color:var(--text);padding:0;box-shadow:0 24px 100px #20110740}
+.cart-dialog::backdrop{background:rgba(38,25,17,.5);backdrop-filter:blur(4px)}
+.cart-header{padding:26px 28px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--card);z-index:1}
+.cart-header .eyebrow{font-size:9px;margin-bottom:8px}
+.cart-header h2{font-size:40px}
+.close-cart{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;flex:none;font-size:28px;line-height:1}
+.cart-content{padding:0 28px 26px}
+.cart-empty{padding:26px 0;color:var(--muted)}
+.cart-items{list-style:none;padding:0;margin:0}
+.cart-item{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.cart-item>img{width:72px;height:90px;border-radius:10px;object-fit:cover;flex:none}
+.cart-item-details{min-width:0;flex:1}
+.cart-item h3{font-family:"Montserrat",sans-serif;font-size:13px;line-height:1.5;font-weight:500;margin:0 0 3px}
+.cart-item p{font-size:12px;color:var(--muted);margin:0 0 10px}
+.cart-item-controls{display:flex;align-items:center;gap:10px}
+.quantity-button{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;background:white;font-size:17px}
+.quantity-value{min-width:20px;text-align:center;font-size:13px}
+.remove-item{border:0;border-bottom:1px solid var(--line);background:transparent;padding:2px;margin-left:auto;color:var(--muted);font-size:11px}
+.cart-units{font-size:12px;margin:20px 0}
+.cart-notes{display:block;font-size:12px;margin-bottom:16px}
+.cart-notes span{color:var(--muted)}
+.cart-notes textarea{display:block;resize:vertical;width:100%;min-height:78px;max-height:160px;margin-top:8px;padding:12px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--text);font-size:13px}
+.cart-explanation{font-size:12px;color:var(--muted)}
+.cart-send{width:100%;gap:12px;margin:4px 0 12px;font-size:11px;letter-spacing:.05em;text-align:center}
+.continue-shopping{display:block;margin:18px auto 0;border:0;background:transparent;text-decoration:underline;text-underline-offset:5px;color:var(--muted);font-size:12px}
+.cart-is-open{overflow:hidden}
+.kit-aroma-note{font-size:11px;color:#e0cfc3;margin:0}
+@media(max-width:1080px){.product-grid{gap:16px}.product-body{padding:24px 18px}.product-body h3{font-size:30px}.aroma-choice{font-size:10px;padding:8px 9px}.product-order{gap:8px}.product-order .btn{font-size:9px}}
+@media(max-width:760px){.product-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}.product-body{padding:26px}.catalog-photo img{aspect-ratio:6/5}.product-body h3{font-size:36px}.product-description{margin-bottom:24px}.selected-aroma{min-height:0}.aroma-choice{font-size:12px;padding:9px 13px}.product-order .btn{font-size:11px}.product-order{gap:14px}.floating-cart{right:16px;bottom:16px}.site-footer{padding-bottom:95px}.cart-content{padding:0 20px 24px}.cart-header{padding:22px 20px}.cart-send{font-size:10px}}
+@media(max-width:380px){.nav{gap:12px}.brand img{max-width:105px;height:auto}.cart-trigger{font-size:9px;padding:9px 10px;gap:6px}.product-body{padding:22px}.aroma-choice{font-size:11px;padding:8px 10px}.cart-item{gap:10px}.cart-item>img{width:52px;height:70px}.cart-item-controls{gap:7px}}
