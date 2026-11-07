@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <header class="site-header">
@@ -25,7 +25,7 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a href="https://wa.me/59161328386" class="nav-cta" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <button type="button" class="nav-cta cart-trigger" data-open-cart aria-haspopup="dialog">Mi carrito <span class="cart-count" data-cart-count>0</span></button>
     </div>
   </header>
 
@@ -67,91 +67,70 @@
           <p class="eyebrow">La colección</p>
           <h2>Tres rituales, tres aromas</h2>
           <p class="section-copy">
-            Texturas, flores y aromas para transformar lo cotidiano en un momento tuyo.
+            Elige tus productos, encuentra tu aroma y arma un ritual a tu medida.
           </p>
         </div>
 
-        <!-- Cremas -->
-        <article class="line">
-          <div class="line-copy">
-            <span class="line-index">01 · Hidrata</span>
-            <h3>Crema de sebo de res</h3>
-            <p class="line-tags">Hidrata · Nutre · Suaviza</p>
-            <p>
-              Sebo de res purificado con aceite de coco, aceite de almendras y vitamina E,
-              con un delicado aroma. Una textura que nutre y deja la piel suave.
-            </p>
-            <dl class="specs">
-              <div><dt>Contenido</dt><dd>50 g</dd></div>
-              <div><dt>Uso</dt><dd>Sobre piel limpia y seca, masajear hasta absorber</dd></div>
-              <div><dt>Duración</dt><dd>6 meses después de abierto</dd></div>
-            </dl>
-            <ul class="aroma-chips">
-              <li class="c-lavanda">Lavanda</li>
-              <li class="c-limon">Limón</li>
-              <li class="c-jazmin">Jazmín</li>
-            </ul>
-          <a class="product-link" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20consultar%20por%20crema%20de%20sebo%20de%20res" target="_blank" rel="noopener">Consultar disponibilidad <span aria-hidden="true">↗</span></a>
-          </div>
-          <figure class="line-visual product-photo cremas">
-            <img src="assets/hidratante-corporal-yselea.webp" alt="Crema corporal de sebo de res Yseléa en frasco de vidrio ámbar, con textura cremosa" loading="lazy" width="1000" height="1250" />
-            <figcaption>Un gesto de cuidado, cada día.</figcaption>
-          </figure>
-        </article>
-
-        <!-- Sales -->
-        <article class="line reverse">
-          <div class="line-copy">
-            <span class="line-index">02 · Relaja</span>
-            <h3>Sales de baño</h3>
-            <p class="line-tags">Relaja · Suaviza · Equilibra</p>
-            <p>
-              Sales de baño perfumadas y flores secas.
-              Dos o tres cucharadas en agua tibia y quince minutos solo para ti.
-            </p>
-            <dl class="specs">
-              <div><dt>Contenido</dt><dd>250 g</dd></div>
-              <div><dt>Uso</dt><dd>2 a 3 cucharadas en la bañera con agua tibia</dd></div>
-            </dl>
-            <ul class="aroma-list">
-              <li><span class="dot c-lavanda"></span><em>Susurro de Lavanda</em></li>
-              <li><span class="dot c-limon"></span><em>Amanecer de Limón</em></li>
-              <li><span class="dot c-jazmin"></span><em>Caricia de Jazmín</em></li>
-            </ul>
-          <a class="product-link" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20consultar%20por%20sales%20de%20ba%C3%B1o" target="_blank" rel="noopener">Consultar disponibilidad <span aria-hidden="true">↗</span></a>
-          </div>
-          <figure class="line-visual product-photo sales">
-            <img src="assets/sales-producto.webp" alt="Sales de baño Yseléa con lavanda, en botella de vidrio con tapa blanca" loading="lazy" width="1120" height="1400" />
-            <figcaption>Flores, sal y un momento para ti.</figcaption>
-          </figure>
-        </article>
-
-        <!-- Bombas -->
-        <article class="line">
-          <div class="line-copy">
-            <span class="line-index">03 · Detente</span>
-            <h3>Bomba de baño efervescente</h3>
-            <p class="line-tags">Relaja · Calma · Equilibra</p>
-            <p>
-              Sal de Epsom, bicarbonato, ácido cítrico y aceite de coco, con un delicado aroma.
-              Se deshace en burbujas y aroma en cuanto toca el agua.
-            </p>
-            <dl class="specs">
-              <div><dt>Contenido</dt><dd>100 g</dd></div>
-              <div><dt>Uso</dt><dd>Colocar en la bañera con agua tibia y disfrutar</dd></div>
-            </dl>
-            <ul class="aroma-list">
-              <li><span class="dot c-lavanda"></span><em>Lavanda Nocturna</em></li>
-              <li><span class="dot c-limon"></span><em>Brisas de Limón</em></li>
-              <li><span class="dot c-jazmin"></span><em>Jazmín Serena</em></li>
-            </ul>
-          <a class="product-link" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20consultar%20por%20bombas%20de%20ba%C3%B1o" target="_blank" rel="noopener">Consultar disponibilidad <span aria-hidden="true">↗</span></a>
-          </div>
-          <figure class="line-visual product-photo bombas">
-            <img src="assets/bombitas-bano-yselea.webp" alt="Bombas de baño artesanales en tonos lavanda y marfil, decoradas con flores" loading="lazy" width="1000" height="1250" />
-            <figcaption>Deja que el agua haga una pausa.</figcaption>
-          </figure>
-        </article>
+        <div class="product-grid">
+          <article class="product-card" data-product="crema">
+            <div class="catalog-photo"><img src="assets/crema-floral-v2.webp" alt="Frasco ámbar de crema de sebo de res Yseléa con la etiqueta floral de Lavanda" loading="lazy" width="1120" height="1400" /></div>
+            <div class="product-body">
+              <p class="line-index">01 · Hidrata</p>
+              <h3>Crema de sebo de res</h3>
+              <p class="line-tags">Hidrata · Nutre · Suaviza · 50 g</p>
+              <p class="product-description">Sebo de res purificado con aceite de coco, aceite de almendras y vitamina E. Una textura que nutre y deja la piel suave.</p>
+              <form class="product-form" data-product-form="crema">
+                <p class="selected-aroma">Elige tu aroma: <strong data-selected-aroma>Lavanda</strong></p>
+                <div class="aroma-options" role="group" aria-label="Aroma de crema de sebo de res"><button type="button" class="aroma-choice c-lavanda" data-aroma="lavanda" data-aroma-name="Lavanda" aria-pressed="true"><span aria-hidden="true"></span>Lavanda</button>
+<button type="button" class="aroma-choice c-limon" data-aroma="limon" data-aroma-name="Limón" aria-pressed="false"><span aria-hidden="true"></span>Limón</button>
+<button type="button" class="aroma-choice c-jazmin" data-aroma="jazmin" data-aroma-name="Jazmín" aria-pressed="false"><span aria-hidden="true"></span>Jazmín</button></div>
+                <div class="product-order">
+                  <label class="quantity-label" for="qty-crema">Cantidad<input id="qty-crema" name="quantity" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" required /></label>
+                  <button class="btn btn-primary" type="submit">Añadir al carrito</button>
+                </div>
+              </form>
+            </div>
+          </article>
+          <article class="product-card" data-product="sales">
+            <div class="catalog-photo"><img src="assets/sales-producto.webp" alt="Sales de baño Yseléa con lavanda y pétalos de rosa en botella con tapa blanca" loading="lazy" width="1120" height="1400" /></div>
+            <div class="product-body">
+              <p class="line-index">02 · Relaja</p>
+              <h3>Sales de baño</h3>
+              <p class="line-tags">Relaja · Suaviza · Equilibra · 250 g</p>
+              <p class="product-description">Sales perfumadas y flores secas. Dos o tres cucharadas en agua tibia y un momento solo para ti.</p>
+              <form class="product-form" data-product-form="sales">
+                <p class="selected-aroma">Elige tu aroma: <strong data-selected-aroma>Susurro de Lavanda</strong></p>
+                <div class="aroma-options" role="group" aria-label="Aroma de sales de baño"><button type="button" class="aroma-choice c-lavanda" data-aroma="lavanda" data-aroma-name="Susurro de Lavanda" aria-pressed="true"><span aria-hidden="true"></span>Lavanda</button>
+<button type="button" class="aroma-choice c-limon" data-aroma="limon" data-aroma-name="Amanecer de Limón" aria-pressed="false"><span aria-hidden="true"></span>Limón</button>
+<button type="button" class="aroma-choice c-jazmin" data-aroma="jazmin" data-aroma-name="Caricia de Jazmín" aria-pressed="false"><span aria-hidden="true"></span>Jazmín</button></div>
+                <div class="product-order">
+                  <label class="quantity-label" for="qty-sales">Cantidad<input id="qty-sales" name="quantity" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" required /></label>
+                  <button class="btn btn-primary" type="submit">Añadir al carrito</button>
+                </div>
+              </form>
+            </div>
+          </article>
+          <article class="product-card" data-product="bomba">
+            <div class="catalog-photo"><img src="assets/bombas-floral-v2.webp" alt="Bombas de baño Yseléa envueltas individualmente con sus etiquetas florales" loading="lazy" width="1120" height="1400" /></div>
+            <div class="product-body">
+              <p class="line-index">03 · Detente</p>
+              <h3>Bomba de baño efervescente</h3>
+              <p class="line-tags">Relaja · Calma · Equilibra · 100 g</p>
+              <p class="product-description">Sal de Epsom, bicarbonato, ácido cítrico y aceite de coco. Se deshace en burbujas y aroma en cuanto toca el agua.</p>
+              <form class="product-form" data-product-form="bomba">
+                <p class="selected-aroma">Elige tu aroma: <strong data-selected-aroma>Lavanda Nocturna</strong></p>
+                <div class="aroma-options" role="group" aria-label="Aroma de bomba de baño efervescente"><button type="button" class="aroma-choice c-lavanda" data-aroma="lavanda" data-aroma-name="Lavanda Nocturna" aria-pressed="true"><span aria-hidden="true"></span>Lavanda</button>
+<button type="button" class="aroma-choice c-limon" data-aroma="limon" data-aroma-name="Brisas de Limón" aria-pressed="false"><span aria-hidden="true"></span>Limón</button>
+<button type="button" class="aroma-choice c-jazmin" data-aroma="jazmin" data-aroma-name="Jazmín Serena" aria-pressed="false"><span aria-hidden="true"></span>Jazmín</button></div>
+                <div class="product-order">
+                  <label class="quantity-label" for="qty-bomba">Cantidad<input id="qty-bomba" name="quantity" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" required /></label>
+                  <button class="btn btn-primary" type="submit">Añadir al carrito</button>
+                </div>
+              </form>
+            </div>
+          </article>
+        </div>
+        <p class="catalog-note">Arma tu selección. Te confirmamos disponibilidad y total por WhatsApp.</p>
       </div>
     </section>
 
@@ -167,7 +146,7 @@
         <div class="section-head light">
           <p class="eyebrow">Kits de regalo · Unidades limitadas</p>
           <h2>Para regalar <em>o regalarte</em></h2>
-          <p class="section-copy">Pequeños detalles que dicen mucho. Elige tu kit y consulta los aromas disponibles por WhatsApp.</p>
+          <p class="section-copy">Pequeños detalles que dicen mucho. Añade tu kit y coordinamos los aromas contigo por WhatsApp.</p>
         </div>
 
         <div class="kit-grid">
@@ -184,7 +163,8 @@
                 <li>1 Crema de sebo de res (50 g)</li>
                 <li>1 Collar de regalo</li>
               </ul>
-              <a class="btn btn-light" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20el%20Kit%201" target="_blank" rel="noopener">Consultar este kit</a>
+              <button class="btn btn-light" type="button" data-add-kit="kit1">Añadir kit al carrito</button>
+              <p class="kit-aroma-note">Coordinamos el aroma de tu kit por WhatsApp.</p>
             </div>
           </article>
 
@@ -200,7 +180,8 @@
                 <li>1 Crema de sebo de res (50 g)</li>
                 <li>1 Manilla o moña de regalo (según disponibilidad)</li>
               </ul>
-              <a class="btn btn-light" href="https://wa.me/59161328386?text=Hola%20Ysel%C3%A9a%2C%20quiero%20el%20Kit%202" target="_blank" rel="noopener">Consultar este kit</a>
+              <button class="btn btn-light" type="button" data-add-kit="kit2">Añadir kit al carrito</button>
+              <p class="kit-aroma-note">Coordinamos el aroma de tu kit por WhatsApp.</p>
             </div>
           </article>
         </div>
@@ -267,5 +248,23 @@
       <p class="footer-note">© 2026 Yseléa · Cosmética artesanal</p>
     </div>
   </footer>
+
+  <button class="floating-cart" type="button" data-open-cart aria-haspopup="dialog">Ver mi carrito <span class="cart-count" data-cart-count>0</span></button>
+  <div class="cart-toast" id="cart-status" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="cart-header"><div><p class="eyebrow">Tu ritual empieza aquí</p><h2 id="cart-title">Mi carrito</h2></div><button class="close-cart" type="button" data-close-cart aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-content">
+      <p class="cart-empty" id="cart-empty">Tu carrito está esperando un poquito de cuidado. Elige tus productos y aromas favoritos.</p>
+      <ul class="cart-items" id="cart-items" aria-label="Productos de tu carrito"></ul>
+      <div id="cart-summary" hidden>
+        <p class="cart-units" id="cart-units"></p>
+        <label class="cart-notes" for="cart-notes">¿Algún detalle para tu pedido? <span>(opcional)</span><textarea id="cart-notes" maxlength="500" rows="3" placeholder="Por ejemplo: es para regalo…"></textarea></label>
+        <p class="cart-explanation">Se abrirá WhatsApp con tu selección. Allí confirmamos disponibilidad, aromas de los kits y el total de tu pedido.</p>
+        <a class="btn btn-primary cart-send" id="cart-send" href="https://wa.me/59161328386" target="_blank" rel="noopener">Enviar pedido por WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="continue-shopping" type="button" data-close-cart>Seguir eligiendo</button>
+    </div>
+  </dialog>
+  <script src="shop.js?v=1" defer></script>
 </body>
 </html>
