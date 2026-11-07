@@ -1,12 +1,13 @@
 (() => {
   'use strict';
   const catalog = {
-    crema: {name: 'Crema de sebo de res · 50 g', image: 'assets/crema-floral-v2.webp', aromas: {lavanda: 'Lavanda', limon: 'Limón', jazmin: 'Jazmín'}},
-    sales: {name: 'Sales de baño · 250 g', image: 'assets/sales-producto.webp', aromas: {lavanda: 'Susurro de Lavanda', limon: 'Amanecer de Limón', jazmin: 'Caricia de Jazmín'}},
-    bomba: {name: 'Bomba de baño efervescente · 100 g', image: 'assets/bombas-floral-v2.webp', aromas: {lavanda: 'Lavanda Nocturna', limon: 'Brisas de Limón', jazmin: 'Jazmín Serena'}},
+    crema: {name: 'Crema de sebo de res · 50 g', image: 'assets/crema-floral-v2.webp', images: {lavanda: 'assets/crema-floral-v2.webp', limon: 'assets/crema-limon-foto.webp', jazmin: 'assets/crema-jazmin-foto.webp'}, aromas: {lavanda: 'Lavanda', limon: 'Limón', jazmin: 'Jazmín'}},
+    sales: {name: 'Sales de baño · 250 g', image: 'assets/sales-producto.webp', images: {lavanda: 'assets/sales-producto.webp', limon: 'assets/sales-limon-foto.webp', jazmin: 'assets/sales-jazmin-foto.webp'}, aromas: {lavanda: 'Susurro de Lavanda', limon: 'Amanecer de Limón', jazmin: 'Caricia de Jazmín'}},
+    bomba: {name: 'Bomba de baño efervescente · 100 g', image: 'assets/bomba-lavanda-foto.webp', images: {lavanda: 'assets/bomba-lavanda-foto.webp', limon: 'assets/bomba-limon-foto.webp', jazmin: 'assets/bomba-jazmin-foto.webp'}, aromas: {lavanda: 'Lavanda Nocturna', limon: 'Brisas de Limón', jazmin: 'Jazmín Serena'}},
     kit1: {name: 'Kit 1 · El ritual completo · Con collar', image: 'assets/kit-1-v2.webp', aromas: {coordinar: 'Aroma por coordinar'}},
     kit2: {name: 'Kit 2 · Un detalle para ti · Con manilla o moña', image: 'assets/kit-2-v2.webp', aromas: {coordinar: 'Aroma por coordinar'}}
   };
+  const imageFor = (product, aroma) => catalog[product].images?.[aroma] || catalog[product].image;
   const storageKey = 'yselea-cart-v1';
   const dialog = document.querySelector('#cart-dialog');
   const itemsList = document.querySelector('#cart-items');
@@ -60,7 +61,7 @@
     cart.forEach(item => {
       const product = catalog[item.product];
       const row = node('li', 'cart-item');
-      const img = node('img'); img.src = product.image; img.alt = ''; img.width = 72; img.height = 90;
+      const img = node('img'); img.src = imageFor(item.product, item.aroma); img.alt = ''; img.width = 72; img.height = 90;
       const details = node('div', 'cart-item-details');
       details.append(node('h3', '', product.name), node('p', '', product.aromas[item.aroma]));
       const controls = node('div', 'cart-item-controls');
@@ -104,6 +105,9 @@
         selected = button.dataset.aroma;
         form.querySelectorAll('[data-aroma]').forEach(option => option.setAttribute('aria-pressed', String(option === button)));
         form.querySelector('[data-selected-aroma]').textContent = catalog[product].aromas[selected];
+        const image = form.closest('[data-product]').querySelector('.catalog-photo img');
+        image.src = imageFor(product, selected);
+        image.alt = `${catalog[product].name}, aroma ${catalog[product].aromas[selected]}`;
       });
     });
     form.addEventListener('submit', event => {
